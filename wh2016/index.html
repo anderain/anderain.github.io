@@ -21,6 +21,9 @@
 	.code-font {
 		font-family: 'Courier New';
 	}
+	.code-font {
+		font-family: 'Courier New';
+	}
 	.SongTi-font {
 		font-family: 'SimSun';
 	}
@@ -54,6 +57,36 @@
 		background: rgb(220, 220, 255);
 		border-radius: 3px;
 	}
+	.sc0 {
+	}
+	.sc1 {
+		color: #008000;
+	}
+	.sc2 {
+		color: #008000;
+	}
+	.sc4 {
+		color: #FF8000;
+	}
+	.sc5 {
+		font-weight: bold;
+		color: #0000FF;
+	}
+	.sc6 {
+		color: #808080;
+	}
+	.sc9 {
+		color: #804000;
+	}
+	.sc10 {
+		font-weight: bold;
+		color: #000080;
+	}
+	.sc11 {
+	}
+	.sc16 {
+		color: #8000FF;
+	}
 </style>
 <div class="board">
 <h2>深大白帽2016招新测试（第二次）</h2>
@@ -65,9 +98,9 @@
 <p>下面这段代码将会打印出什么内容？<span class='stamp-success'>33分</span>若能详细解释程序工作的步骤，可额外加分。<span class='stamp-success'>20分</span></p>
 <hr />
 <pre class="code-font">
-#include "stdio.h"
+<span class="sc9">#include "stdio.h"</span>
 </pre>
-<pre class="SongTi-font">
+<pre class="SongTi-font"><span class="sc1">
 /*
  *      ╭╮　　　  ╭╮　　
  *      ││　　　  ││　　
@@ -80,16 +113,16 @@
  *    ╰—┬Ｏ——Ｏ┬—╯
  *　    ╭╮　　　　╭╮　　　　
  *      ╰┴————┴╯
- */
+ */</span>
 </pre>
 <pre class="code-font">
-int main() {
-    return 
-        printf("%\143~\0Play",
-            printf("%\x73", &(2 +
-                printf("%.1s", "Mad Max"))["Video"])[
-                    "Game!"] + 0xA);
-}
+<span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> 
+        </span><span class="sc11">printf</span><span class="sc10">(</span><span class="sc6">"%\143~\0Play"</span><span class="sc10">,</span><span class="sc0">
+            </span><span class="sc11">printf</span><span class="sc10">(</span><span class="sc6">"%\x73"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">&amp;(</span><span class="sc4">2</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0">
+                </span><span class="sc11">printf</span><span class="sc10">(</span><span class="sc6">"%.1s"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"Mad Max"</span><span class="sc10">))[</span><span class="sc6">"Video"</span><span class="sc10">])[</span><span class="sc0">
+                    </span><span class="sc6">"Game!"</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">0xA</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span>
 </pre>
 </div>
 <div class="board">
@@ -100,18 +133,18 @@ int main() {
 <p>（3）使用32位编译器编译后，执行下列代码的操作将会打印出什么值，请作答并简要分析。<span class='stamp-success'>14分</span></p>
 <hr />
 <pre class='code-font'>
-#include "stdio.h"
+<span class="sc9">#include "stdio.h"
+</span><span class="sc0">
+</span><span class="sc16">struct</span><span class="sc0"> </span><span class="sc11">tag_s</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc16">char</span><span class="sc0"> </span><span class="sc11">c</span><span class="sc10">[</span><span class="sc4">3</span><span class="sc10">];</span><span class="sc0">
+    </span><span class="sc16">short</span><span class="sc0"> </span><span class="sc11">s</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc16">struct</span><span class="sc0"> </span><span class="sc11">tag_s</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc11">un</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">S</span><span class="sc10">;</span><span class="sc0">
 
-struct tag_s {
-    char c[3];
-    short s;
-    struct tag_s *un;
-} S;
-
-int main() {
-    printf("%d\n", sizeof(S));
-    return 0;
-}
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">printf</span><span class="sc10">(</span><span class="sc6">"%d\n"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc5">sizeof</span><span class="sc10">(</span><span class="sc11">S</span><span class="sc10">));</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span>
 </pre>
 </div>
 <div class="board">
@@ -120,21 +153,14 @@ int main() {
 <p>请补全函数<span class='stamp-info'>binary_search</span>让程序能够正确运行。<span class='stamp-success'>33分</span></p>
 <hr />
 <pre class='code-font'>
-#include "stdio.h"
+<span class="sc9">#include "stdio.h"</span>
 
-int binary_search(int a[], int length, int key) {
-    int begin = 0;
-    int end = length - 1;
-    // code here...
-    return -1;
-}
-
-int main() {
-    int a[] = { 1,2,3,4,5,6,7,8,9 };
-    int length = sizeof(a) / sizeof(int);
-    printf("%d\n", binary_search(a, length, 9));
-    return 0;
-}
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">[]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">,</span><span class="sc4">2</span><span class="sc10">,</span><span class="sc4">3</span><span class="sc10">,</span><span class="sc4">4</span><span class="sc10">,</span><span class="sc4">5</span><span class="sc10">,</span><span class="sc4">6</span><span class="sc10">,</span><span class="sc4">7</span><span class="sc10">,</span><span class="sc4">8</span><span class="sc10">,</span><span class="sc4">9</span><span class="sc0"> </span><span class="sc10">};</span><span class="sc0">
+    </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">length</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">sizeof</span><span class="sc10">(</span><span class="sc11">a</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">/</span><span class="sc0"> </span><span class="sc5">sizeof</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">printf</span><span class="sc10">(</span><span class="sc6">"%d\n"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">binary_search</span><span class="sc10">(</span><span class="sc11">a</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">length</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">9</span><span class="sc10">));</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span>
 </pre>
 </div>
 </body>
