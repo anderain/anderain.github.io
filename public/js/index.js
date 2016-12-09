@@ -9,7 +9,6 @@ $(document).ready(function() {
     for (var i = 0; i < result.length; ++i) {
       var brief = result[i];
       var uri = result[i].uri;
-      console.log(brief);
       addCard($('#recent-posts'),
               '/articles/' + uri + '/' + brief.coverImage,
               brief.title,
