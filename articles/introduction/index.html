@@ -1,0 +1,40 @@
+<p>本站是假设在Github Page上的静态网站，前端使用Materialize实现，文章数据使用KuroArticle生成。</p>
+<h4>KuroArticle使用简介</h4>
+<p>首先在KuroArticle的目录下建立配制文件config.json。此文件包含写作目录和输出目录两个字段。如下：</p>
+<pre><code>{
+    &quot;articlesDirectory&quot; : &quot;D:\\MyBlog\\articles&quot;,
+    &quot;outputDirectory&quot; : &quot;D:\\MyBlog\\devel\\articles&quot;
+}
+</code></pre>
+<p>跟make的行为类似，KuroArticle会自动扫描写作目录下的文章变化。<br />
+<img src="./articles/introduction/terminal-1.png" alt="KuroArticle Terminal" /><br />
+写作目录的结构如下，每篇文章的目录下下都有简介brief.json与文章正文article.md两个文件，文章封面图、正文中引用到的图片都应放在文章的目录中。</p>
+<pre><code>写作目录
+  ├─文章目录1
+  │   ├─brief.json
+  │   ├─article.md
+  │   ├─文章引用图片a.jpg
+  │   └─文章引用图片b.png
+  │
+  ├─文章目录2
+  │   ├─brief.json
+  │   ├─article.md
+  │   ├─文章引用图片c.jpg
+  │   └─文章引用图片d.png
+  │
+  └─文章目录3 ...
+</code></pre>
+<p>article.md与普通的Markdown文件没有区别。brief.json的格式为：</p>
+<pre><code>{
+    &quot;coverImage&quot;        : &quot;cover-image.jpg&quot;,
+    &quot;title&quot;             : &quot;Introduction of Uiharu.Hime&quot;,
+    &quot;subtitle&quot;          : &quot;网站与KuroArticle的使用说明&quot;,
+    &quot;summaryTitle&quot;      : &quot;这是一个简单的介绍&quot;,
+    &quot;summaryContent&quot;    : &quot;同时还是一个使用的备忘录&quot;,
+    &quot;creationTime&quot;      : &quot;2016-12-8 12:10&quot;,
+    &quot;tag&quot;               : &quot;no-tag&quot;
+}
+</code></pre>
+<h4>提交页面到Github</h4>
+<p>直接提交更新过的页面即可。</p>
+

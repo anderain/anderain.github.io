@@ -1,0 +1,31 @@
+.tab-label {
+
+}
+
+.title {
+  line-height: 22px;
+}
+
+.tabs {
+	margin-top: 12px;
+}
+
+.article-image {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  left: 22px;
+  top: 12px;
+  display: inline-block;
+  background-size: cover;
+}
+
+.collection .collection-item.avatar {
+    padding-left: 104px;
+}
+
+.summary {
+  font-size: 12px;
+}

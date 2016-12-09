@@ -1,0 +1,7 @@
+html {
+  font-family: 'Open Sans', Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+
+.title-shadow {
+	text-shadow: 1px 1px 5px rgba(0,0,0,0.5);;
+}

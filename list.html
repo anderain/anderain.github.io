@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index,follow">
+  <meta name="application-name" content="初春·姫" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile chrome color -->
+  <meta name="theme-color" content="#1976d2">  
+  <META name="author" content="Materialize中文网">
+  <title>文章列表 | 初春·姫</title>
+  <link rel="stylesheet" href="./public/css/materialize.min.css"/>
+  <link rel="stylesheet" href="./public/css/theme.css"/>
+  <link rel="stylesheet" href="./public/css/prism.css"/>
+  <link rel="stylesheet" href="./public/css/list.css"/>
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav class="blue">
+      <div class="container">
+        <div class="nav-wrapper blue">
+          <a href="/" class="brand-logo">初春·姫</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/list.html?tag=all">文章</a></li>
+            <li><a href="/list.html?tag=game">游戏</a></li>
+            <li><a href="/list.html?tag=game-device">游戏设备</a></li>
+            <li><a href="/about.html">工作室</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="/list.html?tag=all">文章</a></li>
+            <li><a href="/list.html?tag=game">游戏</a></li>
+            <li><a href="/list.html?tag=game-device">游戏设备</a></li>
+            <li><a href="/about.html">工作室</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="row main-body">
+    <div class="col l2 m1 s12 hide-on-small-only">&nbsp;</div>
+    <div class="col l8 m10 s12">
+      <div class="row">
+        <ul class="tabs z-depth-1">
+          <li class="tab col s3"><a class="blue-text tabel-label" href="#tab-area1" data-tag="all">全部</a></li>
+          <li class="tab col s3"><a class="blue-text tabel-label" href="#tab-area2" data-tag="no-tag">未分类</a></li>
+          <li class="tab col s3"><a class="blue-text tabel-label" href="#tab-area3" data-tag="game">游戏</a></li>
+          <li class="tab col s3"><a class="blue-text tabel-label" href="#tab-area4" data-tag="game-device">游戏设备</a></li>
+        </ul>
+        <div id='#tab-area1'></div>
+        <div id='#tab-area2'></div>
+        <div id='#tab-area3'></div>
+        <div id='#tab-area4'></div>
+      </div>
+      <div>
+        <div id='load-progress'>
+          <center>
+            <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <p>正在加载</p>
+          </center>
+        </div>
+        <div>
+         <ul class="collection" id='list-articles'>
+         </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col l2 m1 s12 hide-on-small-only">&nbsp;</div>
+  </div>
+  
+  <footer class="page-footer blue">
+    <div class="row">
+      <div class="container">
+        <p class="white-text" id="footer-title">文章列表</p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2016 BackToUiharu Copyright
+        <a class="grey-text text-lighten-4 right" href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+           
+  <script src="./public/js/jquery.min.js"></script>
+  <script src="./public/js/materialize.min.js"></script>
+  <script src="./public/js/prism.js"></script>
+  <script src="./public/js/params.js"></script>
+  <script src="./public/js/list.js"></script>
+</body>
+</html>

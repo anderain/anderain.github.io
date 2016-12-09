@@ -1,52 +1,157 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Anderain.GitHub.io : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Uiharu Hime</title>
-  </head>
-  <style>
-  	body {
-		font-family: 'Microsoft Yahei';
-	}
-  </style>
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner">思考一下</a>
-
-          <h1 id="project_title">初春 · 姫</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index,follow">
+  <meta name="application-name" content="初春·姫" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile chrome color -->
+  <meta name="theme-color" content="#1976d2">  
+  <META name="author" content="Materialize中文网">
+  <title>HOME | 初春·姫</title>
+  <link rel="stylesheet" href="./public/css/materialize.min.css"/>
+  <link rel="stylesheet" href="./public/css/theme.css"/>
+  <link rel="stylesheet" href="./public/css/prism.css"/>
+  <link rel="stylesheet" href="./public/css/index.css"/>
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav class="blue">
+      <div class="container">
+        <div class="nav-wrapper blue">
+          <a href="/" class="brand-logo center">初春·姫</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/list.html?tag=all">文章</a></li>
+            <li><a href="/list.html?tag=game">游戏</a></li>
+            <li><a href="/list.html?tag=game-device">游戏设备</a></li>
+            <li><a href="/about.html">工作室</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <div class="nav-caption">
+              <img src="./images/uiharu_hime_logo.png" class="nav-capition-img ">
+            </div>
+            <li><a href="/list.html?tag=all">文章</a></li>
+            <li><a href="/list.html?tag=game">游戏</a></li>
+            <li><a href="/list.html?tag=game-device">游戏设备</a></li>
+            <li><a href="/about.html">工作室</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+  <div class="row">
+    <!-- LEFT -->
+    <div class="col s12 m4 l3 hide-on-small-only" style="padding: 0px; height: 100%;">
+      <div class="left-bar">
+        <div class="row white-board">
+          <center>
+            <img class="circle img-avatar" src="./images/avatar.png"><br />
+            <table>
+              <tr><td><i class="tiny mdi-social-person blue-text"></i></td><td>初春静流</td></tr>
+              <tr><td><i class="tiny mdi-communication-location-on blue-text"></i></td><td>学园都市，平行世界</td></tr>
+              <tr><td><i class="tiny mdi-communication-email blue-text"></i></td><td>anderain.ryu@qq.com</td></tr>
+            </table>
+          </center>
+        </div>
+        <!-- <div class="row grey-board">
+          <div class="input-field col s12">
+            <i class="mdi-action-search prefix"></i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">搜索文章</label>
+          </div>
+        </div> -->
+        <div class="row white-board">
+          <center><strong>奖杯 / 游戏成就</strong></center>
+        </div>
+        <div class="row">
+          <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header"><center><img class="achievement-icon" src="images/icons/playstation-128.png"></center></div>
+              <div class="collapsible-body"><p>尚未同步PSN奖杯。</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><center><img class="achievement-icon" src="images/icons/steam-128.png"></center></div>
+              <div class="collapsible-body"><p>尚未同步Steam成就。</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><center><img class="achievement-icon" src="images/icons/nintendo-128.png"></center></div>
+              <div class="collapsible-body"><p>Nintendo还没有官方成就系统啦~</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><center><img class="achievement-icon" src="images/icons/xbox-128.png"></center></div>
+              <div class="collapsible-body"><p>尚未同步Xbox成就。</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>欢迎来到本站</h3>
-
-<p>本站仍在建设中，以后将会在此展示个人的游戏成就、游戏及游戏机评测等内容。</p>
-
-      </section>
+    <!-- RIGHT -->
+    <div class="col s12 m8 l9" style="padding: 0px;">
+      <div class='jumbotron'>
+        <img src="./images/uiharu_hime_logo.png" class="jumbotron-caption">
+      </div>
+      <div>
+        <div class='recent-post-progress'>
+          <center>
+            <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <p>正在加载最近发表的文章</p>
+          </center>
+        </div>
+        <div class="row" id="recent-posts">
+        </div>
+       </div>
+      </div>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
+  </div>
+  
+  <footer class="page-footer blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">关于本站</h5>
+          <p class="grey-text text-lighten-4">
+            <strong>初春·姫</strong> - 技术 | 游戏评测 | 游戏设备。<br />
+            本站页面使用<span class="gh-page-link">KuroArticle</span>生成，<br .>
+            发布在<a href="https://pages.github.com/" class="gh-page-link">Github Pages</a>上。
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">友情链接</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="http://tonoko.zz.mu/">tonoko | non-existent ever</a></li>
+            <li><a class="grey-text text-lighten-3" href="http://ao.acg.ac/">苍崎橙子</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.zephray.com/">Zephray's Space</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.ntzyz.cn/">ntzyz的主页</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    
-
-  </body>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2016 BackToUiharu Copyright
+        <a class="grey-text text-lighten-4 right" href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+           
+  <script src="./public/js/jquery.min.js"></script>
+  <script src="./public/js/materialize.min.js"></script>
+  <script src="./public/js/prism.js"></script>
+  <script src="./public/js/index.js"></script>
+</body>
 </html>
