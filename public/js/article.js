@@ -32,7 +32,7 @@ $(document).ready(function() {
       $('#card-title').html(brief.title);
       $('#footer-title').html(brief.title + "（发布于" + brief.creationTime + "）");
       $('#subtitle').html(brief.subtitle);
-
+	  duoshuo(brief);
       document.title = brief.title + " | 初春·姫";
 
       $('#card-caption-progress').hide();
@@ -49,4 +49,24 @@ $(document).ready(function() {
       });
     }
     });
+	
 });
+
+// 多说评论框
+var duoshuoQuery = {short_name:"uiharuhime"};
+
+function duoshuo(brief) {
+  $('#duoshuo-remarks').append(
+	'<div class="ds-thread" ' + 
+	  'data-thread-key="' + params.a + '" ' + 
+	  'data-title="' + brief.title + '" ' +
+	  'data-url="' + location.href + '">' + 
+	'</div>');
+ (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+}
