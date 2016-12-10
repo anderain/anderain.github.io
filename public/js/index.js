@@ -7,37 +7,31 @@ $(document).ready(function() {
   // fetch recent posts
   $.get('articles/recent-post.json', function (result) {
     for (var i = 0; i < result.length; ++i) {
-      var brief = result[i];
-      var uri = result[i].uri;
-      addCard($('#recent-posts'),
-              '/articles/' + uri + '/' + brief.coverImage,
-              brief.title,
-              brief.subtitle,
-              brief.summaryTitle,
-              brief.summaryContent,
-              'article.html?a=' + uri);
+      addCard($('#recent-posts'), result[i]);
     }
     $('.recent-post-progress').hide();
   }, 'json');
 
 });
 
-function addCard(col, image, outerTitle, outerContent, innerTitle, innerContent, link) {
+function addCard(col, brief) {
+  var time = dateSub(new Date(brief.creationTime));
 	var html = 
     '<div class="col s12 m6 l4"><div class="card">' +
       '<div  class="card-image waves-effect waves-block waves-light">' +
-        '<img class="activator" src="' + image + '">' +
-        '<span class="card-title title-shadow">' + outerTitle + '</span>' +
+        '<img class="activator" src="' + '/articles/' + brief.uri + '/' + brief.coverImage + '">' +
+        '<span class="card-title title-shadow">' + brief.title + '</span>' +
       '</div>' +
       '<div class="card-content">' +
-        '<p>' + outerContent + '</p>' +
+        '<p>' + brief.subtitle + '</p>' +
       '</div>' +
       '<div class="card-reveal">' +
-        '<span class="card-title grey-text text-darken-4">' + innerTitle + '<i class="mdi-navigation-close right"></i></span>' +
-        '<p>' + innerContent + '</p>' +
+        '<span class="card-title grey-text text-darken-4">' + brief.summaryTitle + '<i class="mdi-navigation-close right"></i></span>' +
+        '<p>' + brief.summaryContent + '</p>' +
       '</div>' +
       '<div class="card-action">' +
-        '<a href="' + link + '">查看详情</a>' +
+        '<a href="' + 'article.html?a=' + brief.uri + '">查看详情</a>' +
+        '<small class="right small grey-text">' + time + '</small>' +
       '</div>' +
     '</div>' +
   '</div></div>';

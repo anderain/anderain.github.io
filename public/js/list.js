@@ -37,12 +37,11 @@ function onClickTab(tag) {
 }
 
 function createItemHtml(brief) {
-  var summary = brief.summaryTitle + '。' + brief.summaryContent;
   var html = 
   '<li class="collection-item avatar">' +
     '<span class="article-image" style="background-image: url(' + '/articles/' + brief.uri + '/' + brief.coverImage + ');">&nbsp;</span>' + 
     '<a class="title blue-text" href="' + 'article.html?a=' + brief.uri +  '">' + brief.title + '</a>' +
-    '<p class="grey-text summary">' + brief.subtitle + '<br />' + clip(summary) + '</p>' +
+    '<p class="grey-text summary">' + brief.subtitle + '<br />发表于：' + dateSub(new Date(brief.creationTime)) + '</p>' +
     '<a href="#!" class="blue-text secondary-content"><i class="mdi-action-grade"></i></a>' +
   '</li>';
   return html;
