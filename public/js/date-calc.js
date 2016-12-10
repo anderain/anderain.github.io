@@ -1,11 +1,12 @@
-function dateSub(postTime) {
+function dateSub(timeStr) {
   var now = new Date();
-  var date3 = now.getTime() - postTime.getTime()
+  timeStr = timeStr.replace(/-/g,"/")
+  var date3 = now.getTime() - new Date(timeStr).getTime()
    
   var days = Math.floor(date3 / (24 * 3600 * 1000))
 
   if (days > 10)
-    return postTime;
+    return timeStr;
 
   var leave1 = date3 % (24 * 3600 * 1000)
   var hours = Math.floor(leave1/(3600 * 1000))

@@ -15,7 +15,7 @@ $(document).ready(function() {
 });
 
 function addCard(col, brief) {
-  var time = dateSub(new Date(brief.creationTime));
+  var time = dateSub(brief.creationTime);
 	var html = 
     '<div class="col s12 m6 l4"><div class="card">' +
       '<div  class="card-image waves-effect waves-block waves-light">' +
