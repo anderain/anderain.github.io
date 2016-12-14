@@ -62,7 +62,7 @@ function duoshuo(brief) {
 	  'data-title="' + brief.title + '" ' +
 	  'data-url="' + location.href + '">' + 
 	'</div>');
- (function() {
+  (function() {
     var ds = document.createElement('script');
     ds.type = 'text/javascript';ds.async = true;
     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
